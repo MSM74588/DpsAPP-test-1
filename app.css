@@ -246,6 +246,7 @@ a, a:active, a:any-link ,a:checked{
 
   .notice-inner {
     grid-area: notice-inner;
+    background-color: gray;
   }
 
   .buttons {
