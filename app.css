@@ -230,18 +230,22 @@ a, a:active, a:any-link ,a:checked{
 
   .report {
     grid-area: report;
+    background-color: greenyellow;
   }
 
   .question {
     grid-area: question;
+    background-color: hotpink;
   }
 
   .events {
     grid-area: events;
+    background-color: indianred;
   }
 
   .fees {
     grid-area: fees;
+    background-color: lavenderblush;
   }
 
   .notice-inner {
