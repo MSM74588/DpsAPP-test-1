@@ -241,6 +241,8 @@ a:checked {
     background-color: var(--icon-column);
   }
 
+/* NOTE FEES IS RENAMED TO BOOKMARKS */
+
   .fees {
     grid-area: fees;
     background-color: var(--icon-column);
