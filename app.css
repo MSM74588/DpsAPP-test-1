@@ -9,6 +9,7 @@ html,
 body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--bg);
 }
 
 a, a:active, a:any-link ,a:checked{
@@ -23,6 +24,9 @@ a, a:active, a:any-link ,a:checked{
   --textred: #e87474;
   --textgreen: #48834b;
   --buttonbg: #444444;
+  --notice-inner: #ECF0F2;
+  --icon-column: #C2F1BA;
+  --bg: #E5E5E5;
 }
 
 .grid-container{
@@ -40,6 +44,10 @@ a, a:active, a:any-link ,a:checked{
 
 /* For desktop ////////////////////////////////////////////////////////////////*/
 
+.announcement > a {
+  text-decoration-line:underline;
+  text-decoration-color: var(--textred);
+}
 
 .grid-container {
   display: grid;
@@ -154,6 +162,10 @@ a, a:active, a:any-link ,a:checked{
   line-height: 35px;
 }
 
+
+
+
+
 /* ##############    MOBILE LAYOUT   ################ */
 @media only screen and (max-width: 600px) {
 .schooltext{
@@ -175,7 +187,7 @@ a, a:active, a:any-link ,a:checked{
     
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 20% 10% 1fr 80px;
+    grid-template-rows: 10% 20% 10% 1fr 85px;
     gap: 0px 0px;
     grid-template-areas:
       "title"
@@ -196,27 +208,23 @@ a, a:active, a:any-link ,a:checked{
 
   .schoolname {
     grid-area: schoolname;
-    background: #c2f1ba;
   }
 
   .menu {
     grid-area: menu;
-    background: #e87474;
   }
 
   .student {
     grid-area: student;
-    background: #ffdfdf;
   }
 
   .announcement {
     grid-area: announcement;
-    background-color: #48834b;
   }
 
   .notice {
     display: grid;
-    grid-template-columns: 3fr 70px;
+    grid-template-columns: 3fr 80px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -225,32 +233,40 @@ a, a:active, a:any-link ,a:checked{
       "notice-inner events"
       "notice-inner fees";
     grid-area: notice;
-    background-color: antiquewhite;
+    
   }
 
   .report {
     grid-area: report;
-    background-color: greenyellow;
+    border-radius: 3.54571px 0px 0px 0px;
+    background-color: var(--icon-column);
+    
   }
 
   .question {
     grid-area: question;
-    background-color: hotpink;
+    background-color: var(--icon-column);
+    
   }
 
   .events {
     grid-area: events;
-    background-color: indianred;
+    background-color: var(--icon-column);
+
   }
 
   .fees {
     grid-area: fees;
-    background-color: lavenderblush;
+    background-color: var(--icon-column);
+    border-radius: 0px 3.54571px 0px 0px;
+    
   }
 
   .notice-inner {
     grid-area: notice-inner;
-    background-color: gray;
+    background-color: var(--notice-inner);
+    border-radius: 0px 3.54571px 3.54571px 0px;
+    margin-right: 10px;
   }
 
   .buttons {
@@ -260,7 +276,6 @@ a, a:active, a:any-link ,a:checked{
     gap: 0px 0px;
     grid-template-areas: ". .";
     grid-area: buttons;
-    background-color: darkkhaki;
   }
 }
 
