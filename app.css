@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -12,10 +12,12 @@ body {
   background-color: var(--bg);
 }
 
-a, a:active, a:any-link ,a:checked{
+a,
+a:active,
+a:any-link,
+a:checked {
   text-decoration: none;
 }
-
 
 :root {
   --green: #c2f1ba;
@@ -24,28 +26,22 @@ a, a:active, a:any-link ,a:checked{
   --textred: #e87474;
   --textgreen: #48834b;
   --buttonbg: #444444;
-  --notice-inner: #ECF0F2;
-  --icon-column: #C2F1BA;
-  --bg: #E5E5E5;
+  --notice-inner: #ecf0f2;
+  --icon-column: #c2f1ba;
+  --bg: #e5e5e5;
 }
 
-.grid-container{
-    height: 100vh;
-    width: 100vw;
+.grid-container {
+  height: 100vh;
+  width: 100vw;
 }
-
 
 /* body { background-color: var(--blue); } */
-
-
-
-
-
 
 /* For desktop ////////////////////////////////////////////////////////////////*/
 
 .announcement > a {
-  text-decoration-line:underline;
+  text-decoration-line: underline;
   text-decoration-color: var(--textred);
 }
 
@@ -106,7 +102,6 @@ a, a:active, a:any-link ,a:checked{
   grid-area: buttons;
 }
 
-
 .usefullinks {
   grid-area: usefullinks;
 }
@@ -133,58 +128,53 @@ a, a:active, a:any-link ,a:checked{
 
 /* proerties */
 
-#menuimg{
-    height: 15px;
-    float: right;
+#menuimg {
+  height: 15px;
+  float: right;
 }
 
-.schooltext{
-    font-family: 'Poppins', sans-serif;
-    color: var(--textgreen);
-    font-size: 50px;
-    /* font-size: 5vw; */
+.schooltext {
+  font-family: "Poppins", sans-serif;
+  color: var(--textgreen);
+  font-size: 50px;
+  /* font-size: 5vw; */
 }
 
-.title{
-    padding: 20px;
+.title {
+  padding: 20px;
 }
 
-.announcement > a > h1{
+.announcement > a > h1 {
   color: var(--textred);
   font-family: poppins;
   padding: 20px;
 }
 
-.student > h1{
+.student > h1 {
   font-family: poppins;
   font-size: 30px;
   margin: 20px;
   line-height: 35px;
 }
 
-
-
-
-
 /* ##############    MOBILE LAYOUT   ################ */
 @media only screen and (max-width: 600px) {
-.schooltext{
-  font-size: 5vw;
-}
-#menuimg{
-  height: 20px;
-  padding: 5px;
-}
+  .schooltext {
+    font-size: 5vw;
+  }
+  #menuimg {
+    height: 20px;
+    padding: 5px;
+  }
 
-.announcement > a > h1{
-  font-size: 23px;
-}
+  .announcement > a > h1 {
+    font-size: 23px;
+  }
 
   .grid-container {
     height: 100vh;
     width: 100vw;
 
-    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10% 20% 10% 1fr 85px;
@@ -233,33 +223,28 @@ a, a:active, a:any-link ,a:checked{
       "notice-inner events"
       "notice-inner fees";
     grid-area: notice;
-    
   }
 
-  .report {
+  .studentcorner {
     grid-area: report;
     border-radius: 3.54571px 0px 0px 0px;
     background-color: var(--icon-column);
-    
   }
 
   .question {
     grid-area: question;
     background-color: var(--icon-column);
-    
   }
 
   .events {
     grid-area: events;
     background-color: var(--icon-column);
-
   }
 
   .fees {
     grid-area: fees;
     background-color: var(--icon-column);
     border-radius: 0px 3.54571px 0px 0px;
-    
   }
 
   .notice-inner {
@@ -274,9 +259,60 @@ a, a:active, a:any-link ,a:checked{
     grid-template-columns: 1fr 2.5fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
-    grid-template-areas: ". .";
+    grid-template-areas: "br br";
     grid-area: buttons;
   }
+
+  .buttonleft {
+    grid-area: bl;
+    /* Not implemented in home screen */
+
+  }
+
+  .buttonright {
+    grid-area: br;
+    
+  }
+
+  .classbutton {
+    background: #ffdfdf;
+    box-shadow: 2.61905px 6.98413px 8.73016px -0.873016px rgba(211, 144, 144, 0.25);
+    border-radius: 4.36508px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    margin: 10px;
+
+    color: var(--textred);
+    font-family: Poppins;
+  }
+
+.iconbox{
+  width: 57px;
+  height: 57px;
+  margin: auto;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  /* transform: translateY(-10px); */
+}
+
+  .iconfont{
+    font-size: 10px;
+  }
+
+}
+
+.iconcontainer{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 /* REMOVE THE CLOURS FROM THE COTAINER IN GRID */
+button ,button:active ,button:checked , button:link, button:default{
+  border: none;
+  outline: none;
+}
