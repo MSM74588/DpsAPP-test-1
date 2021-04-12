@@ -287,16 +287,25 @@ a:checked {
   }
 
 .iconbox{
-  width: 57px;
-  height: 57px;
+  width: 7vh;
+  height: 7vh;
   margin: auto;
   background-color: #FFFFFF;
   border-radius: 7px;
+  margin-top: 10px;
+  
   /* transform: translateY(-10px); */
 }
 
   .iconfont{
-    font-size: 10px;
+    margin-top: 5px;
+    font-size: 9px;
+    position: relative;
+    bottom: 5px;
+    font-family: Poppins;
+    color: #212121;
+    line-height: 10px;
+    text-align: center;
   }
 
 }
