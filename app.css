@@ -45,7 +45,7 @@ a:checked {
   text-decoration-color: var(--textred);
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -124,7 +124,7 @@ a:checked {
 
 .fees {
   grid-area: fees;
-}
+} */
 
 /* proerties */
 
@@ -177,7 +177,7 @@ a:checked {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 20% 10% 1fr 85px;
+    grid-template-rows: 10% 15% 10% 1fr 85px;
     gap: 0px 0px;
     grid-template-areas:
       "title"
