@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--bg);
+}
+
+a,
+a:active,
+a:any-link,
+a:checked {
+  text-decoration: none;
+}
+
+:root {
+  --green: #c2f1ba;
+  --bgwhite: #ecf0f2;
+  --bgred: #ffdfdf;
+  --textred: #e87474;
+  --textgreen: #48834b;
+  --buttonbg: #444444;
+  --notice-inner: #ecf0f2;
+  --icon-column: #c2f1ba;
+  --bg: #e5e5e5;
+}
+
+.grid-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* body { background-color: var(--blue); } */
+
+/* For desktop ////////////////////////////////////////////////////////////////*/
+
+.announcement > a {
+  text-decoration-line: underline;
+  text-decoration-color: var(--textred);
+}
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title title"
+    "student classlink report"
+    "announcement classlink question"
+    "notice usefullinks events"
+    "buttons usefullinks fees";
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "schoolname menu";
+  grid-area: title;
+}
+
+.schoolname {
+  grid-area: schoolname;
+}
+
+.menu {
+  grid-area: menu;
+  height: 100%;
+}
+
+.student {
+  grid-area: student;
+}
+
+.announcement {
+  grid-area: announcement;
+}
+
+.notice {
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ".";
+  grid-area: notice;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  grid-area: buttons;
+}
+
+.usefullinks {
+  grid-area: usefullinks;
+}
+
+.classlink {
+  grid-area: classlink;
+}
+
+.report {
+  grid-area: report;
+}
+
+.question {
+  grid-area: question;
+}
+
+.events {
+  grid-area: events;
+}
+
+.fees {
+  grid-area: fees;
+} */
+
+/* proerties */
+
+#menuimg {
+  height: 15px;
+  float: right;
+}
+
+.schooltext {
+  font-family: "Poppins", sans-serif;
+  color: var(--textgreen);
+  font-size: 50px;
+  /* font-size: 5vw; */
+}
+
+.title {
+  padding: 20px;
+}
+
+.announcement > a > h1 {
+  color: var(--textred);
+  font-family: poppins;
+  padding: 20px;
+}
+
+.student > h1 {
+  font-family: poppins;
+  font-size: 30px;
+  margin: 20px;
+  line-height: 35px;
+}
+
+/* ##############    MOBILE LAYOUT   ################ */
+@media only screen and (max-width: 600px) {
+  .schooltext {
+    font-size: 5vw;
+  }
+  #menuimg {
+    height: 20px;
+    padding: 5px;
+  }
+
+  .announcement > a > h1 {
+    font-size: 23px;
+  }
+
+  .grid-container {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 15% 10% 1fr 85px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "title"
+      "student"
+      "announcement"
+      "notice"
+      "buttons";
+  }
+
+  .title {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "schoolname menu";
+    grid-area: title;
+  }
+
+  .schoolname {
+    grid-area: schoolname;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .student {
+    grid-area: student;
+  }
+
+  .announcement {
+    grid-area: announcement;
+  }
+
+  .notice {
+    display: grid;
+    grid-template-columns: 3fr 80px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "notice-inner report"
+      "notice-inner question"
+      "notice-inner events"
+      "notice-inner fees";
+    grid-area: notice;
+  }
+
+  .studentcorner {
+    grid-area: report;
+    border-radius: 3.54571px 0px 0px 0px;
+    background-color: var(--icon-column);
+  }
+
+  .question {
+    grid-area: question;
+    background-color: var(--icon-column);
+  }
+
+  .events {
+    grid-area: events;
+    background-color: var(--icon-column);
+  }
+
+/* NOTE FEES IS RENAMED TO BOOKMARKS */
+
+  .fees {
+    grid-area: fees;
+    background-color: var(--icon-column);
+    border-radius: 0px 3.54571px 0px 0px;
+  }
+
+  .notice-inner {
+    grid-area: notice-inner;
+    background-color: var(--notice-inner);
+    border-radius: 0px 3.54571px 3.54571px 0px;
+    margin-right: 10px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "br br";
+    grid-area: buttons;
+  }
+
+  .buttonleft {
+    grid-area: bl;
+    /* Not implemented in home screen */
+
+  }
+
+  .buttonright {
+    grid-area: br;
+    
+  }
+
+  .classbutton {
+    background: #ffdfdf;
+    box-shadow: 2.61905px 6.98413px 8.73016px -0.873016px rgba(211, 144, 144, 0.25);
+    border-radius: 4.36508px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    margin: 10px;
+
+    color: var(--textred);
+    font-family: Poppins;
+  }
+
+.iconbox{
+  width: 7vh;
+  height: 7vh;
+  margin: auto;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  margin-top: 10px;
+  
+  /* transform: translateY(-10px); */
+}
+
+  .iconfont{
+    margin-top: 5px;
+    font-size: 9px;
+    position: relative;
+    bottom: 5px;
+    font-family: Poppins;
+    color: #212121;
+    line-height: 10px;
+    text-align: center;
+  }
+
+}
+
+.iconcontainer{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/* REMOVE THE CLOURS FROM THE COTAINER IN GRID */
+button ,button:active ,button:checked , button:link, button:default{
+  border: none;
+  outline: none;
+}
