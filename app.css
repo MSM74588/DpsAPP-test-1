@@ -223,6 +223,8 @@ a:checked {
       "notice-inner events"
       "notice-inner fees";
     grid-area: notice;
+
+    
   }
 
   .studentcorner {
@@ -254,6 +256,7 @@ a:checked {
     background-color: var(--notice-inner);
     border-radius: 0px 3.54571px 3.54571px 0px;
     margin-right: 10px;
+    box-shadow: 0px 4px 31px 6px rgba(0, 0, 0, 0.11);
   }
 
   .buttons {
