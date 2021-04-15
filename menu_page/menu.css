@@ -36,18 +36,18 @@ a:checked {
     position: absolute;
     bottom: 0;
     margin: 30px;
-    line-height: 40px;
+    line-height:  30px;
 }
 
 .options > a{
     font-family: Poppins;
     color: var(--buttonbg);
-    font-size: 12px;
+    font-size: 8px;
 }
 
 #madeby{
     color: var(--madeby);
-    font-size: 13px;
+    font-size: 10px;
 }
 
 button{
