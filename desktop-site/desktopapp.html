@@ -1,0 +1,112 @@
+<!-- Desktop optimised site -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../app.css" />
+    <link rel="manifest" href="../manifest.json" />
+
+    <!-- Generated from npx pwa-asset-generator -->
+
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="../icons/apple-icon-180.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    
+
+    <title>MandraSaptak</title>
+  </head>
+  <body>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+
+<script type="text/javascript">
+  function redirect() {
+  if (screen.width < 851) {
+     window.location = "../index.html";
+  }
+  }
+  </script>
+
+  <body onload="setTimeout('redirect()', 150)">
+    <!-- Redirection Script -->
+
+    <div class="grid-container">
+      <div class="title">
+        <div class="schoolname">
+          <h1 class="schooltext">Delhi Public School</h1>
+        </div>
+        <div class="menu">
+          <a href="menu.html" 
+            ><img id="menuimg" src="../resources/menu.svg" alt="menu" 
+          /></a>
+        </div>
+      </div>
+      <div class="student">
+        <h1>Hello,<br />Students</h1>
+      </div>
+      <div class="announcement">
+        <a href="https://www.notion.so/Announcements-74aad8100b7e4851821a0dd575bf8036" target="_blank"><h1>Announcement</h1></a>
+      </div>
+
+      <!-- add anchoer to iconcontainer -->
+
+      <div class="notice">
+        <div class="studentcorner">
+          <div class="iconcontainer">
+            <a href="https://mandrasaptakdev.blogspot.com/"
+              ><button class="iconbox">
+                <img src="../ico/class.svg" alt="studentcorner" /></button
+            ></a>
+            <h1 class="iconfont">Student<br />Corner</h1>
+          </div>
+        </div>
+        <div class="question">
+          <div class="iconcontainer">
+            <a href="http://192.168.0.1/"
+              ><button class="iconbox"><img src="../ico/qb.svg" alt="qb" /></button
+            ></a>
+            <h1 class="iconfont">Question<br />Bank</h1>
+          </div>
+        </div>
+        <div class="events">
+          <div class="iconcontainer">
+            <a href="https://www.notion.so/Events-46e720416c3844dbac5e60e78a71b884" target="_blank"
+              ><button class="iconbox">
+                <img src="../ico/calender.svg" alt="events" /></button
+            ></a>
+            <h1 class="iconfont">Events</h1>
+          </div>
+        </div>
+        <div class="fees">
+          <!-- RENAMED TO BOOKMARKS  -->
+          <div class="iconcontainer">
+            <a href="https://raindrop.io/collection/14514085"
+              ><button class="iconbox">
+                <img src="../ico/bookmark.svg" alt="bookmark" /></button
+            ></a>
+            <h1 class="iconfont">Bookmarks</h1>
+          </div>
+        </div>
+        <div class="notice-inner">
+          <!-- Notice Section -->
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="buttonright">
+          <a href="../class_page/class.html"
+            ><button class="classbutton"><h1>Classes</h1></button></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

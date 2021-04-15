@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "student-corner app-area";
+
+    height: 100vh;
+    width: 100vw;
+
+}
+  
+  .student-corner { grid-area: student-corner; }
+  
+  .app-area { 
+      grid-area: app-area;
+      border: thick solid hsla(0, 0%, 84%, 0.822);
+      border-radius: 5px;
+
+}
+  

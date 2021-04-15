@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
     <link rel="manifest" href="manifest.json" />
+    
 
     <!-- Generated from npx pwa-asset-generator -->
 
@@ -149,6 +151,18 @@
     <title>MandraSaptak</title>
   </head>
   <body>
+
+    <script type="text/javascript">
+      function redirect() {
+      if (screen.width > 850) {
+         window.location = "desktop-site/desktop.html";
+      }
+      }
+      </script>
+
+      <body onload="setTimeout('redirect()', 150)">
+        <!-- Redirection Script -->
+
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("service-worker.js");
@@ -161,7 +175,7 @@
           <h1 class="schooltext">Delhi Public School</h1>
         </div>
         <div class="menu">
-          <a href="menu_page/menu.html"
+          <a href="menu_page/menu.html" 
             ><img id="menuimg" src="resources/menu.svg" alt="menu"
           /></a>
         </div>
