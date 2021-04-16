@@ -16,7 +16,10 @@
 
 }
   
-  .student-corner { grid-area: student-corner; }
+  .student-corner { grid-area: student-corner;
+    padding: 10px;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  }
   
   .app-area { 
       grid-area: app-area;
