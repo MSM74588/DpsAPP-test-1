@@ -56,10 +56,10 @@ button{
     background-color: #00000000;
     padding: 5px;
     border-radius: 5px;
-    border:solid 3px white;
+    border:solid 3px #21212180;
     outline: none;
     font-family: Poppins;
-    color: white;
+    color: #21212180;
 
     position: sticky;
     top: 0;
