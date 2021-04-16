@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="template2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{class-section}}</h1>
+      <a class="p1" href="{{link1}}"><button>{{subject1}} {{time1}}</button></a>
+      <br />
+      <a class="p2" href="{{link2}}"><button>{{subject2}} {{time2}}</button></a>
+      <br />
+      <a class="p3" href="{{link3}}"><button>{{subject3}} {{time3}}</button></a>
+      <br />
+      <a class="p4" href="{{link4}}"><button>{{subject4}} {{time4}}</button></a>
+      <br />
+      <a class="p5" href="{{link5}}"><button>{{subject5}} {{time5}}</button></a>
+      <br />
+      <a class="p6" href="{{link6}}"><button>{{subject6}} {{time6}}</button></a>
+      <br />
+    </div>
+
+    <div id="listcontainer"></div>
+
+    <script
+      src="../jquery/jquery.js"
+    ></script>
+
+
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script src="../jquery/handlebars.js"></script>
+
+    <script>
+        var globaldata = '';
+        var url =
+          "https://api.sheety.co/03ccbfde095a57dbc8423d88b90fdfb5/onlineClass/sheet1";
+        $(document).ready(function () {
+          $.get(url, function (data) {
+            console.log(data);
+            console.log(data.sheet1);
+            var fetchedData = data.sheet1;
+            console.log(fetchedData);
+            fetchedData = globaldata
+            // listcontainer.innerHTML = fetchedData;
+
+            // var parseddata = JSON.parse(fetchedData);
+            // console.log(parseddata);
+
+
+          });
+        });
+  
+  
+        function createHTML(listdata){
+              var rawTemplate = document.getElementById("datatemplate").innerHTML;
+              var compiledtemplate = Handlebars.compile(rawTemplate);
+              var ourgeneratedHTML = compiledtemplate(listdata)
+  
+              // our-generated-HTML var now contains the template created
+        
+  
+        var listcontainer = document.getElementById("listcontainer");
+        listcontainer.innerHTML = ourgeneratedHTML;
+        
+  
+        }
+      </script>
+
+
+    <script type="text/x-handlebars-template">
+        {{#each globaldata}}
+        <div id="datatemplate" class="container">
+            <h1>{{class-section}}</h1>
+            <a class="p1" href="{{link1}}"><button>{{subject1}} {{time1}}</button></a>
+            <br />
+            <a class="p2" href="{{link2}}"><button>{{subject2}} {{time2}}</button></a>
+            <br />
+            <a class="p3" href="{{link3}}"><button>{{subject3}} {{time3}}</button></a>
+            <br />
+            <a class="p4" href="{{link4}}"><button>{{subject4}} {{time4}}</button></a>
+            <br />
+            <a class="p5" href="{{link5}}"><button>{{subject5}} {{time5}}</button></a>
+            <br />
+            <a class="p6" href="{{link6}}"><button>{{subject6}} {{time6}}</button></a>
+            <br />
+          </div>
+        {{/each}}
+        </script>
+
+
+
+
+
+  
+    
+    
+
+    
+  </body>
+</html>
+
+<!-- https://youtu.be/eR3rcalj06Q -->
