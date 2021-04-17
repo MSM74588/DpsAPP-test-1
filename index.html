@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="manifest" href="manifest.webmanifest" />
     
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "e0a0c796-7f53-4ad2-9951-8e417e4a5221",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+
 
     <!-- Generated from npx pwa-asset-generator -->
 
