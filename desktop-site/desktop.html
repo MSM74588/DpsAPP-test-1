@@ -7,8 +7,31 @@
     <meta http-equiv="refresh" content="600">
     <link rel="stylesheet" href="desktop.css">
     <title>MandraSaptak Mandal</title>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "e0a0c796-7f53-4ad2-9951-8e417e4a5221",
+          notifyButton: {
+            enable: true,
+          },
+        });
+      });
+    </script>
+
 </head>
 <body>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("service-worker.js");
+          navigator.serviceWorker.register("OneSignalSDKWorker.js");
+          navigator.serviceWorker.register("OneSignalSDKUpdaterWorker.js");
+        }
+      </script>
+
 
     <script type="text/javascript">
         function redirect() {
