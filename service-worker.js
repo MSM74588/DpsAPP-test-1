@@ -15,3 +15,42 @@ workbox.routing.registerRoute(
     ({request}) => request.destination === 'image',
     new workbox.strategies.NetworkFirst()
 );
+
+
+
+
+
+self.addEventListener("fetch", event => {
+    console.log("You fetched " + event.url);
+});
+
+
+const staticCacheName = 'site-static';
+
+const assets = [
+    '/',
+    '/index.html',
+    '/service-worker.js',
+    '/app.css',
+    '/manifest.webmanifest',
+    '/resources/menu.svg',
+    '/ico/arrow.svg',
+    '/ico/bookmark.svg',
+    '/ico/calender.svg',
+    '/ico/class.svg',
+    '/ico/qb.svg',
+    '/menu_page/menu.html',
+    '/menu_page/menu.css',
+    'https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap',
+    // request urls here to store
+];
+
+
+self.addEventListener('install'), evt => {
+    evt.waitUntil(
+        caches.open(staticCacheName).then(cache => {
+        cache.addAll(assets)
+        console.log('caching offline assets')
+    })
+    )
+}
