@@ -1,266 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="theme-color" content="#c2f1ba">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="app.css" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
-        appId: "e0a0c796-7f53-4ad2-9951-8e417e4a5221",
-        notifyButton: {
-          enable: true,
-        },
-      });
-    });
-  </script>
-  
-  
-  <!-- Generated from npx pwa-asset-generator -->
-  
-  <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
-  
-  <link rel="apple-touch-icon" href="icons/apple-icon-180.png" />
-  
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2048-2732.jpg"
-  media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2732-2048.jpg"
-  media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1668-2388.jpg"
-  media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2388-1668.jpg"
-  media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1536-2048.jpg"
-  media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2048-1536.jpg"
-  media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1668-2224.jpg"
-  media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2224-1668.jpg"
-  media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1620-2160.jpg"
-  media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2160-1620.jpg"
-  media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1284-2778.jpg"
-  media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2778-1284.jpg"
-  media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1170-2532.jpg"
-  media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2532-1170.jpg"
-  media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1125-2436.jpg"
-  media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2436-1125.jpg"
-  media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1242-2688.jpg"
-  media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2688-1242.jpg"
-  media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-828-1792.jpg"
-  media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1792-828.jpg"
-  media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1242-2208.jpg"
-  media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-2208-1242.jpg"
-  media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-750-1334.jpg"
-  media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1334-750.jpg"
-  media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-640-1136.jpg"
-  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-  />
-  <link
-  rel="apple-touch-startup-image"
-  href="icons/apple-splash-1136-640.jpg"
-  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-  />
-  
-  <title>MandraSaptak</title>
-</head>
-<body>
-  
-  <script type="text/javascript">
-    function redirect() {
-      if (screen.width > 850) {
-        window.location = "desktop-site/desktop.html";
-      }
-    }
-  </script>
-  
-  <body onload="setTimeout('redirect()', 150)">
-    <!-- Redirection Script -->
-    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#c2f1ba">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("service-worker.js");
-        navigator.serviceWorker.register("OneSignalSDKWorker.js");
-        navigator.serviceWorker.register("OneSignalSDKUpdaterWorker.js");
-      }
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "e0a0c796-7f53-4ad2-9951-8e417e4a5221",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
     </script>
-    
-    <div class="grid-container">
-      <div class="title">
-        <div class="schoolname">
-          <h1 class="schooltext">Delhi Public School</h1>
-        </div>
-        <div class="menu">
-          <a href="menu_page/menu.html" 
-          ><img id="menuimg" src="resources/menu.svg" alt="menu"
-          /></a>
-        </div>
-      </div>
-      <div class="student">
-        <h1>Hello,<br />Students</h1>
-      </div>
-      <div class="announcement">
-        <a href="https://www.notion.so/Announcements-74aad8100b7e4851821a0dd575bf8036"><h1>Announcement</h1></a>
-      </div>
-      
-      <!-- add anchoer to iconcontainer -->
-      
-      <div class="notice">
-        <div class="studentcorner">
-          <div class="iconcontainer">
-            <a href="https://mandrasaptakdev.blogspot.com/"
-            ><button class="iconbox">
+
+
+    <!-- Generated from npx pwa-asset-generator -->
+
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
+    <title>MandraSaptak</title>
+</head>
+
+<body>
+
+    <pwa-install></pwa-install> ]
+    <script type="text/javascript">
+        function redirect() {
+            if (screen.width > 850) {
+                window.location = "desktop-site/desktop.html";
+            }
+        }
+    </script>
+
+    <body onload="setTimeout('redirect()', 150)">
+        <!-- Redirection Script -->
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("service-worker.js");
+                navigator.serviceWorker.register("OneSignalSDKWorker.js");
+                navigator.serviceWorker.register("OneSignalSDKUpdaterWorker.js");
+            }
+        </script>
+
+        <div class="grid-container">
+            <div class="title">
+                <div class="schoolname">
+                    <h1 class="schooltext">Delhi Public School</h1>
+                </div>
+                <div class="menu">
+                    <a href="menu_page/menu.html"><img id="menuimg" src="resources/menu.svg" alt="menu" /></a>
+                </div>
+            </div>
+            <div class="student">
+                <h1>Hello,<br />Students</h1>
+            </div>
+            <div class="announcement">
+                <a href="https://www.notion.so/Announcements-74aad8100b7e4851821a0dd575bf8036">
+                    <h1>Announcement</h1>
+                </a>
+            </div>
+
+            <!-- add anchoer to iconcontainer -->
+
+            <div class="notice">
+                <div class="studentcorner">
+                    <div class="iconcontainer">
+                        <a href="https://mandrasaptakdev.blogspot.com/"><button class="iconbox">
               <img src="ico/class.svg" alt="studentcorner" /></button
               ></a>
-              <h1 class="iconfont">Student<br />Corner</h1>
-            </div>
-          </div>
-          <div class="question">
-            <div class="iconcontainer">
-              <a href="https://drive.google.com/drive/folders/1vaWARCJMJb5RalC23QsZpeu9AXzwrszH?usp=sharing"
-              ><button class="iconbox"><img src="ico/qb.svg" alt="qb" /></button
+                        <h1 class="iconfont">Student<br />Corner</h1>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="iconcontainer">
+                        <a href="https://drive.google.com/drive/folders/1vaWARCJMJb5RalC23QsZpeu9AXzwrszH?usp=sharing"><button class="iconbox"><img src="ico/qb.svg" alt="qb" /></button
                 ></a>
-                <h1 class="iconfont">Question<br />Bank</h1>
-              </div>
-            </div>
-            <div class="events">
-              <div class="iconcontainer">
-                <a href="https://www.notion.so/Events-46e720416c3844dbac5e60e78a71b884"
-                ><button class="iconbox">
+                        <h1 class="iconfont">Question<br />Bank</h1>
+                    </div>
+                </div>
+                <div class="events">
+                    <div class="iconcontainer">
+                        <a href="https://www.notion.so/Events-46e720416c3844dbac5e60e78a71b884"><button class="iconbox">
                   <img src="ico/calender.svg" alt="events" /></button
                   ></a>
-                  <h1 class="iconfont">Events</h1>
+                        <h1 class="iconfont">Events</h1>
+                    </div>
                 </div>
-              </div>
-              <div class="fees">
-                <!-- RENAMED TO BOOKMARKS  -->
-                <div class="iconcontainer">
-                  <a href="https://raindrop.io/collection/14514085"
-                  ><button class="iconbox">
+                <div class="fees">
+                    <!-- RENAMED TO BOOKMARKS  -->
+                    <div class="iconcontainer">
+                        <a href="https://raindrop.io/collection/14514085"><button class="iconbox">
                     <img src="ico/bookmark.svg" alt="bookmark" /></button
                     ></a>
-                    <h1 class="iconfont">Bookmarks</h1>
-                  </div>
+                        <h1 class="iconfont">Bookmarks</h1>
+                    </div>
                 </div>
                 <div class="notice-inner">
-                  <!-- Notice Section -->
-                  
-                  <h1>Notice</h1>
-                  <div id="devider" ></div>
-                  <iframe referrerpolicy="no-referrer-when-downgrade" height="83%" width="100%" style="border:none;" src="https://view-awesome-table.com/-MYnIWr-kBEYQ9_ZaXHu/view"></iframe>
-                  
-                  
-                  
+                    <!-- Notice Section -->
+
+                    <h1>Notice</h1>
+                    <div id="devider"></div>
+                    <iframe referrerpolicy="no-referrer-when-downgrade" height="83%" width="100%" style="border:none;" src="https://view-awesome-table.com/-MYnIWr-kBEYQ9_ZaXHu/view"></iframe>
+
+
+
                 </div>
-              </div>
-              <div class="buttons">
+            </div>
+            <div class="buttons">
                 <div class="buttonright">
-                  <a href="class_page/class.html"
-                  ><button class="classbutton"><h1>Classes</h1></button></a
+                    <a href="class_page/class.html"><button class="classbutton"><h1>Classes</h1></button></a
                   >
                 </div>
               </div>
             </div>
           </body>
           </html>
-          
