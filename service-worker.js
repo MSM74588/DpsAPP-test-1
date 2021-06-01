@@ -72,3 +72,12 @@ self.addEventListener('fetch', evt => {
 });
 
 // https://youtu.be/g9LfyCZjeKI
+
+self.addEventListener('activate', evt => {
+    evt.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys.filter(key => key !== staticCacheName)
+                .map(key => caches.delete(key)))
+        })
+    )
+})
